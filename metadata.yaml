@@ -1,0 +1,18 @@
+name: marry_groupmate
+display_name: 娶群友
+short_desc: 群内随机抽一位“群老婆”，好感度按组合持久累积
+desc: >-
+  在指定群内发送「娶群友」，随机抽取一位群友作为你的“群老婆”，
+  展示对方 QQ 头像、昵称与 QQ 号，并按「发起人 + 被抽人」持久累积好感度。
+  每人每天限抽一次，同一天重复触发只会被调侃。
+version: 0.1.1
+author: yuyi
+repo: https://github.com/xiaolanyuyi/astrbot_plugin_marry_groupmate
+astrbot_version: ">=4.17.0"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 娱乐
+  - 群聊
+  - 好感度
+  - 随机

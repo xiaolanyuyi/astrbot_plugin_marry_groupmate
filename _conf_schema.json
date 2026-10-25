@@ -1,0 +1,77 @@
+{
+  "enabled": {
+    "description": "启用娶群友",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后不再响应「娶群友」"
+  },
+  "group_ids": {
+    "description": "生效的 QQ 群号",
+    "type": "list",
+    "default": [],
+    "hint": "必须填写才会生效，填群号（数字），例如 [123456789]。可填多个群"
+  },
+  "trigger_text": {
+    "description": "触发词",
+    "type": "string",
+    "default": "娶群友",
+    "hint": "精确匹配（忽略首尾空格），不是包含匹配"
+  },
+  "gain_min": {
+    "description": "单次好感度增加下限",
+    "type": "int",
+    "default": 1,
+    "slider": {"min": 0, "max": 100, "step": 1}
+  },
+  "gain_max": {
+    "description": "单次好感度增加上限",
+    "type": "int",
+    "default": 5,
+    "slider": {"min": 0, "max": 100, "step": 1}
+  },
+  "at_sender_on_repeat": {
+    "description": "重复抽取时 @ 发起人",
+    "type": "bool",
+    "default": true
+  },
+  "ignore_robot_senders": {
+    "description": "忽略机器人发的触发词",
+    "type": "bool",
+    "default": true,
+    "hint": "QQ 成员资料 is_robot 为真的发送者不触发；无法识别所有第三方机器人"
+  },
+  "blocked_sender_ids": {
+    "description": "黑名单发送者 QQ",
+    "type": "list",
+    "default": [],
+    "hint": "这些 QQ 号发的触发词一律不响应，可用于屏蔽群里其他机器人"
+  },
+  "block_imitation": {
+    "description": "拦截大模型伪造的模板消息",
+    "type": "bool",
+    "default": true,
+    "hint": "群上下文里模板太多时，模型会自己套句式编造「群老婆」和好感度；开启后这类消息不会发出"
+  },
+  "repeat_lines": {
+    "description": "重复抽取时的调侃文案池",
+    "type": "list",
+    "default": [
+      "一天想娶几个？QQ 群不是后宫。",
+      "急什么，明天再来排队。",
+      "你这不是娶群友，是批发。",
+      "月老说你今天的额度用完了。",
+      "贪心的人好感度不涨哦。",
+      "重婚罪了解一下。",
+      "建议先照照镜子，冷静一下。",
+      "明天同一时间，准时开奖。",
+      "你这属于把群当民政局了。",
+      "今天这位还热乎着，别惦记别人。",
+      "再抽也还是同一位，别试了。",
+      "你的群老婆正在看着你，注意言行。",
+      "地主家也没余粮了，明天请早。",
+      "月老已下班，明早准时上班。",
+      "这么着急，是怕人跑了吗？"
+    ],
+    "hint": "每次重复触发随机抽一条，接在「你已经娶过了，」后面"
+  }
+}
